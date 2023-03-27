@@ -1,0 +1,23 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, title TEXT, cost INTEGER, price INTEGER, inventory INTEGER);
+
+INSERT INTO store VALUES(1, "Seven Husbands", 1, 10, 5);
+INSERT INTO store VALUES(2, "Red White and Royal Blue", 2, 8, 10);
+INSERT INTO store VALUES(3, "Royals", 2, 8, 15);
+INSERT INTO store VALUES(4, "Heiress", 2, 8, 20);
+INSERT INTO store VALUES(5, "Tangled", 5, 15, 3);
+INSERT INTO store VALUES(6, "After I Do", 5, 15, 2);
+INSERT INTO store VALUES(7,"Forever, Interuppted", 5, 15, 6);
+INSERT INTO store VALUES(8, "Daisy Jones & the Six", 5, 18.99, 4);
+INSERT INTO store VALUES(9, "Maybe In Another Life", 4, 20, 7);
+INSERT INTO store VALUES(10, "Carrie Soto is Back", 3, 17, 10);
+INSERT INTO store VALUES(11, "Malibu Rising", 4, 17, 8);
+INSERT INTO store VALUES(12, "Age of Vice", 10, 25, 3);
+INSERT INTO store VALUES(13, "Love is Blind", 3, 15, 4);
+INSERT INTO store VALUES(14, "Flynn Rider", 7, 19, 4);
+INSERT INTO store VALUES(15, "Rapunzel", 7, 19, 16);
+
+---display the database ordered by price
+Select price from store order by price DESC;
+
+--Calculate sum of current cost of inventory
+SELECT sum(cost)*SUM(inventory) from store ;
